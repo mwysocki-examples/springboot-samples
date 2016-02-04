@@ -15,7 +15,9 @@ ENV MAVEN_VERSION 3.3.3
 
 RUN echo "proxy=http://10.2.64.3:3128" >> /etc/yum.conf
 
-RUN yum install -y --enablerepo=centosplus \
+RUN perl -p -i -e 's/https/http/g' /etc/yum.repos.d/epel.repo
+
+RUN yum install -y  \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y && \
     (curl -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
