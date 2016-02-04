@@ -38,7 +38,7 @@
                   "httpProxy": "http://10.2.64.3:3128",
                   "httpsProxy": "http://10.2.64.3:3128"                  
                },
-               "contextDir": "spring-boot/springboot-sti"
+               "contextDir": "springboot-sti"
             },
             "strategy": {
                "type": "Docker",
@@ -132,7 +132,7 @@
             {
                "description": "Git Directory",
                "name": "CONTEXT_DIR",
-               "value": "spring-boot/helloworld-springboot-maven"
+               "value": "helloworld-springboot-maven"
             },
             {
                "description": "Application options. These options will be passed to the Spring Boot command line",
@@ -374,7 +374,7 @@
             {
                "description": "Git Directory",
                "name": "CONTEXT_DIR",
-               "value": "spring-boot/helloworld-springboot-gradle"
+               "value": "helloworld-springboot-gradle"
             },
             {
                "description": "Github trigger secret",
