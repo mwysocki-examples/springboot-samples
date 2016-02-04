@@ -34,7 +34,7 @@
                "type": "Git",
                "git": {
                   "uri": "https://github.com/mwysocki-examples/springboot-samples.git",
-                  "ref": "master"
+                  "ref": "master",
                   "httpProxy": "http://10.2.64.3:3128",
                   "httpsProxy": "http://10.2.64.3:3128"                  
                },
