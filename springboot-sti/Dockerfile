@@ -13,6 +13,7 @@ ENV proxy http://10.2.64.3:3128/
 ENV GRADLE_VERSION 2.6
 ENV MAVEN_VERSION 3.3.3
 
+RUN echo "proxy=http://10.2.64.3:3128" >> /etc/yum.conf
 
 RUN yum install -y --enablerepo=centosplus 
 RUN tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel 
