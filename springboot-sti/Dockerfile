@@ -15,7 +15,7 @@ ENV MAVEN_VERSION 3.3.3
 
 RUN echo "proxy=http://10.2.64.3:3128" >> /etc/yum.conf
 
-RUN /usr/bin/perl -p -i -e 's/https/http/g' /etc/yum.repos.d/epel.repo
+#RUN sed 's/https/http/g' /etc/yum.repos.d/epel.repo
 
 RUN yum install -y  \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
