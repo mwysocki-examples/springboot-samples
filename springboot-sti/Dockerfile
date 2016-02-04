@@ -20,8 +20,11 @@ RUN echo "proxy=http://10.2.64.3:3128" >> /etc/yum.conf
 RUN yum install -y  \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y
-RUN curl -x ${HTTP_PROXY} -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
+RUN curl -x ${HTTP_PROXY} -0 http://dev-nas.pbp-ch7.dev/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
     tar -zx -C /usr/local
+    
+#RUN curl -x ${HTTP_PROXY} -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
+#    tar -zx -C /usr/local
 RUN mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
     ln -sf /usr/local/maven/bin/mvn /usr/local/bin/mvn && \
     mkdir -p /opt/openshift && \
