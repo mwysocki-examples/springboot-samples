@@ -1,6 +1,6 @@
 # springboot-sti
 FROM openshift/base-centos7
-MAINTAINER Jorge Morales <jmorales@redhat.com>
+MAINTAINER Maciej Wysocki <mwysocki@openwt.com>
 
 ENV HTTP_PROXY http://10.2.64.3:3128/
 ENV HTTPS_PROXY http://10.2.64.3:3128/
