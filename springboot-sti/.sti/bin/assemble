@@ -64,7 +64,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   mvn --version
 
   # Execute the actual build
-  mvn -DsocksProxyHost=10.2.64.3 -DsocksProxyPort=3128 -e $BUILDER_ARGS
+  mvn -DproxySet=true -DsocksProxyHost=10.2.64.3 -DsocksProxyPort=3128 -e $BUILDER_ARGS
 
   ERR=$?
   if [ $ERR -ne 0 ]; then
